@@ -1,0 +1,42 @@
+---
+import ReactIcon from "../icons/React.astro"
+import JavaScriptIcon from "../icons/JavaScript.astro"
+import ExpressJSIcon from "../icons/ExpressJS.astro"
+import MySQLIcon from "../icons/MySQL.astro"
+import CSSIcon from "../icons/CSS.astro"
+import HTMLIcon from "../icons/HTML.astro"
+import GitHubIcon from "../icons/GitHub.astro"
+import GitIcon from "../icons/Git.astro"
+import TailwindCSSIcon from "../icons/Tailwind_CSS.astro"
+import NodeJSIcon from "../icons/NodeJS.astro"
+import AstroIcon from "../icons/Astr.astro"
+import RabbitMQIcon from "../icons/RabbitMQ.astro"
+import CSharpIcon from "../icons/CSharp.astro"
+
+const TechStackItems = [
+    {name:'Node.js', icon: NodeJSIcon},
+    {name:'React', icon: ReactIcon}, 
+    {name:'JavaScript', icon: JavaScriptIcon},
+    {name:'Astro', icon: AstroIcon},
+    {name:'HTML', icon: HTMLIcon},
+    {name:'CSS', icon: CSSIcon},
+    {name:'Tailwind CSS', icon: TailwindCSSIcon},
+    {name:'Express.js', icon: ExpressJSIcon}, 
+    {name:'C Sharp', icon: CSharpIcon},
+    {name:'MySQL', icon: MySQLIcon},
+    {name:'Github', icon: GitHubIcon},
+    {name:'Git', icon: GitIcon},
+]
+---
+<div class="overflow-hidden py-6">
+    <ul class="flex gap-6 md:gap-7 animate-slide w-max">
+        {
+            TechStackItems.concat(TechStackItems).map(item => (
+                <li class="flex flex-col items-center gap-2 px-4 py-2 rounded-lg text-sm md:text-base transition duration-300 hover:scale-110">
+                    <item.icon class="size-11 md:size-12 text-yellow-200"/>
+                    {item.name}
+                </li>
+            ))
+        }
+    </ul>
+</div>

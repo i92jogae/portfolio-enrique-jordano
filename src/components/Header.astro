@@ -1,0 +1,55 @@
+---
+import LogoIcon from "../icons/Logo.astro";
+const navItems = [
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Tech Stack",
+    label: "tech-stack",
+    url: "/#tech-stack",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "/#contacto",
+  },
+]
+---
+
+<header class="fixed top-0 z-50 backdrop-filter backdrop-blur-[3px] left-0 w-full border-b border-gray-400/30 flex justify-center md:justify-between items-center py-3 md:py-4 px-5 md:px-8">
+   <a
+      href="/#top" class="hover:scale-[1.10] transition duration-300 ease-in-out" 
+   >
+      <LogoIcon class="hidden md:block"/>
+   </a>
+   <nav class="flex flex-row gap-x-6 md:gap-x-10 text-white text-sm md:text-base font-medium">
+      {
+         navItems.map(item => (
+            <a
+               class="py-2 relative border-sky-400 hover:scale-[1.10] hover:text-sky-400 transition duration-300 ease-in-out
+                        before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2.5px] before:bg-sky-400 
+                        before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300
+                     "
+               href={item.url}
+               aria-label={item.label}
+            >
+               {item.title}
+            </a>
+         ))
+      }
+   </nav>
+
+</header>

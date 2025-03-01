@@ -1,0 +1,120 @@
+---
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Layout from '../layouts/Layout.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import SocialPill from '../components/SocialPill.astro';
+import MailIcon from '../icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import BuildingIcon from '../icons/Building.astro';
+import CodeIcon from '../icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import IdeaIcon from '../icons/Idea.astro';
+import PersonIcon from '../icons/Person.astro';
+import AboutMe from '../components/AboutMe.astro';
+import ContactIcon from '../icons/Contact.astro';
+import Contact from '../components/Contact.astro';
+import DownloadIcon from '../icons/Download.astro';
+import TechStack from '../components/TechStack.astro';
+---
+
+<Layout 
+	title="Enrique Jordano García | Full-Stack Developer & Software Engineer"
+	description="Portfolio de Enrique Jordano García, Ingeniero de Software especializado en desarrollo Full-Stack. Descubre mis proyectos y experiencia."
+>
+	<main class="px-4">
+		<SectionContainer class="pt-32 md:pt-52 md:pb-24">
+			<div class="flex flex-row gap-4 flex-wrap items-center pb-4 lg:pb-7">
+				<h1 class="text-4xl md:text-5xl font-bold flex">
+					Enrique Jordano García 
+				</h1>
+				<a 
+					class="flex items-center"
+					href="https://www.linkedin.com/in/enrique-jordano-garcía"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Badge>Abierto a nuevas oportunidades</Badge>
+					
+				</a>
+			</div>
+			<h2 class="text-lg md:text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span class="text-sky-400 font-medium">+1 año de experiencia.</span>
+				<span class="text-yellow-200/90 font-medium">Ingeniero Informático y Desarrollador Full-Stack</span>
+				<span class="opacity-80">de Córdoba, España. Especializado en desarrollo Frontend.</span>
+			</h2>
+			<nav class="flex gap-4 md:gap-5 mt-8 mb-5 md:mb-7 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/enrique-jordano-garcía">
+					<LinkedInIcon class="size-4 lg:size-6"/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/i92jogae">
+					<GitHubIcon class="size-4 md:size-6"/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:enriquejordanogarcia@gmail.com">
+					<MailIcon class="size-4 lg:size-6"/>
+					enriquejordanogarcia@gmail.com
+				</SocialPill>
+			</nav>
+			
+			<a
+				class="w-fit flex flex-row items-center gap-1 rounded-lg text-xs md:text-base py-2 px-3 md:py-3 md:px-3 hover:bg-gray-300 bg-white text-neutral-900 font-semibold transition"
+				href="https://drive.google.com/file/d/1_ZciRahg5jAnQlpl_PIi95P66im7Tnrp/view?usp=sharing"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<DownloadIcon class="size-4 md:size-6"/>
+				Descarga mi CV
+			</a>
+			
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
+				<BuildingIcon class="md:size-9 size-8"/>
+				Experiencia laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
+				<IdeaIcon class="md:size-9 size-8"/>
+				Proyectos
+			</h2>
+			<p class="text-base md:text-lg text-gray-300 mb-4">
+				Actualmente estoy trabajando en ampliar mi portfolio con nuevos proyectos. ¡Pronto habrá más novedades!
+			</p>
+			<Projects/>
+		</SectionContainer>
+
+		<SectionContainer id="tech-stack">
+			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
+				<CodeIcon class="md:size-9 size-8"/>
+				Tech stack
+			</h2>
+			<p class="text-base md:text-lg mb-4">
+				Estas son algunas de las tecnologías clave en mis proyectos y en mi desarrollo profesional.
+			</p>
+			<TechStack/>
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
+				<PersonIcon class="md:size-9 size-8"/>
+				Sobre mí
+			</h2>
+			<AboutMe/>
+		</SectionContainer>
+
+		<SectionContainer id="contacto" class="pb-20 md:pb-24 flex flex-col items-center text-center">
+			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex flex-col gap-y-4 items-center">
+				<ContactIcon class="size-14 md:size-16"/>
+				Contacto
+			</h2>
+			<Contact/>
+		</SectionContainer>
+	</main>
+</Layout>

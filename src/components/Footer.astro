@@ -1,0 +1,44 @@
+---
+import CopyrightIcon from "../icons/Copyright.astro";
+import DiagonalArrowIcon from "../icons/DiagonalArrow.astro";
+import GitHub2Icon from "../icons/GitHub2.astro";
+import LinkedIn2Icon from "../icons/LinkedIn2.astro";
+import Mail2Icon from "../icons/Mail2.astro";
+
+---
+<footer class="rounded-lg py-9 md:pt-11 md:pb-10 px-4 w-full mx-auto">
+    <div class="w-full mx-auto max-w-screen-xl flex flex-col md:flex-row gap-y-6 items-center md:justify-between">
+        <span class="text-sm md:text-base items-center gap-1 text-gray-300 flex flex-row">
+            <CopyrightIcon class="size-4 md:size-5"/>
+            2025 - 
+            <a href="#top" class="hover:underline"> 
+                Enrique Jordano 
+            </a>
+            - All Rights Reserved
+        </span>
+        <ul class="flex flex-wrap gap-6 items-center mt-3 text-sm md:text-base font-medium text-gray-300 sm:mt-0">
+            <li>
+                <a href="https://www.linkedin.com/in/enrique-jordano-garcía" target="_blank" rel="noopener noreferrer" class="flex flex-row gap-1 items-center hover:text-sky-400 hover:underline">
+                    <LinkedIn2Icon class="size-7 md:size-8"/>
+                    LinkedIn
+                    <DiagonalArrowIcon class="size-3 md:size-4 self-start"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/i92jogae" target="_blank" rel="noopener noreferrer" class="flex flex-row gap-1 items-center hover:text-sky-400 hover:underline">
+                    <GitHub2Icon class="size-6 md:size-7 stroke-[2]"/>
+                    GitHub
+                    <DiagonalArrowIcon class="size-3 md:size-4 self-start"/>
+
+                </a>
+            </li>
+            <li>
+                <a href="mailto:enriquejordanogarcia@gmail.com" target="_blank" rel="noopener noreferrer" class="flex flex-row gap-1 items-center hover:text-sky-400 hover:underline">
+                    <Mail2Icon class="size-6 md:size-7"/>
+                    Email
+                    <DiagonalArrowIcon class="size-3 md:size-4 self-start"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>

@@ -1,0 +1,45 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date:'Junio 2024 - Actualidad',
+        title:'Junior Engineer',
+        company: 'NTT DATA',
+        description: 'Formo parte de un ambicioso proyecto de implantación de un sistema software para el servicio de emergencias 112 de Andalucía, centrándome en la integración de servicios acoplados al producto. Reforzando así, mis habilidades técnicas y mi conocimiento en el desarrollo e integración de sistemas.',
+        descriptionPoints: [
+            'Desarrollo Full-Stack con C# (.NET) en el backend y JavaScript (React) en el frontend, implementando arquitecturas escalables y mantenibles.',
+            'Integración de servicios de telefonía mediante RabbitMQ para la mensajería asíncrona y comunicación eficiente entre sistemas.',
+            'Gestión de versiones y colaboración en equipo con Git y GitLab, utilizando flujos de trabajo.',
+            'Administración y optimización de bases de datos Oracle, trabajando con herramientas como DBeaver para consultas y mantenimiento.',
+            'Seguimiento ágil de tareas mediante JIRA, herramienta que manejo con fluidez en el día a día.',
+            'Despliegues y administración de entornos en Azure, trabajando con ISM, IIS y otros servicios relacionados.'
+        ],
+    },
+    {
+        date: 'Abril 2023 - Mayo 2024',
+        title: 'Desarrollador Full-Stack en prácticas',
+        company: 'Konecta',
+        description: 'Participé en el desarrollo de una plataforma web corporativa para la gestión vacacional de empleados, implementando soluciones escalables y reutilizables en el front-end y una arquitectura robusta en el back-end.',
+        descriptionPoints: [
+            'Desarrollo Front-end con React, creando componentes reutilizables y modulares, gestionando estados con hooks y optimizando la interacción con el DOM mediante refs.',
+            'Implementación de una arquitectura hexagonal en el Back-end con Node.js y AWS Lambda, promoviendo la separación de responsabilidades y el mantenimiento escalable del código.',
+            'Infraestructura como código (IaC) con AWS CloudFormation para la automatización y despliegue eficiente de servicios en la nube.',
+            'Desarrollo de pruebas unitarias y de integración con Jest y Enzyme, asegurando la estabilidad y fiabilidad del código.',
+            'Gestión de tareas y metodologías ágiles con Jira, facilitando la planificación y el seguimiento del desarrollo.',
+            'Control de versiones con Git y colaboración en equipo a través de flujos de trabajo basados en ramas.',
+        ]
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">        
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-5"> 
+                <ExperienceItem {...experience}/>
+            </li> 
+        ))
+    }          
+    
+</ol>
+

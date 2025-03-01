@@ -1,0 +1,66 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import '@fontsource-variable/onest';
+
+interface Props {
+	title: string
+	description: string
+}
+const {title, description} = Astro.props
+---
+
+
+
+<!doctype html>
+<html lang="es" class="
+	[&::-webkit-scrollbar]:w-3
+	[&::-webkit-scrollbar-track]:bg-neutral-900
+	[&::-webkit-scrollbar-thumb]:rounded-full
+	[&::-webkit-scrollbar-thumb]:bg-white/80
+	[&::-webkit-scrollbar-thumb]:border-t-4
+	[&::-webkit-scrollbar-thumb]:border-b-4
+	[&::-webkit-scrollbar-thumb]:border-solid
+	[&::-webkit-scrollbar-thumb]:border-neutral-900"
+	
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header/>
+		<slot />
+		<Footer/>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		
+	}
+
+	html {
+		font-family: 'Onest Variable', system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		/* GEOMETRICO 1 background-image: linear-gradient(348deg, transparent 0%, transparent 76%,rgba(194, 194, 194,0.04) 76%, rgba(194, 194, 194,0.04) 93%,transparent 93%, transparent 100%),linear-gradient(150deg, transparent 0%, transparent 10%,rgba(194, 194, 194,0.04) 10%, rgba(194, 194, 194,0.04) 74%,transparent 74%, transparent 100%),linear-gradient(68deg, transparent 0%, transparent 36%,rgba(194, 194, 194,0.04) 36%, rgba(194, 194, 194,0.04) 47%,transparent 47%, transparent 100%),linear-gradient(199deg, transparent 0%, transparent 37%,rgba(194, 194, 194,0.04) 37%, rgba(194, 194, 194,0.04) 47%,transparent 47%, transparent 100%),linear-gradient(90deg, rgb(6,6,6),rgb(6,6,6));		color: white; */
+		background-image: linear-gradient(360deg, rgb(23,23,23) 0%,transparent 59%),repeating-linear-gradient(315deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(405deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),linear-gradient(360deg, rgb(23,23,23),rgb(23,23,23));
+		/* DEGRADADO SUAVE background-image: radial-gradient(circle at center center, rgb(51,51,51),rgb(16,16,16)); */
+		color: white;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	@media (prefers-reduced-motion: reduce){
+		html {
+			scroll-behavior: auto;
+		}
+	}
+</style>
