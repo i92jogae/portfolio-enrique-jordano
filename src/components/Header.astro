@@ -1,5 +1,7 @@
 ---
 import LogoIcon from "../icons/Logo.astro";
+import Mail2 from "../icons/Mail2.astro";
+import Person from "../icons/Person.astro";
 const navItems = [
   {
     title: "Experiencia",
@@ -18,11 +20,13 @@ const navItems = [
   },
   {
     title: "Sobre mí",
+    icon: Person,
     label: "sobre-mi",
     url: "/#sobre-mi",
   },
   {
     title: "Contacto",
+    icon: Mail2,
     label: "contacto",
     url: "/#contacto",
   },
@@ -35,19 +39,44 @@ const navItems = [
    >
       <LogoIcon class="hidden md:block"/>
    </a>
-   <nav class="flex flex-row gap-x-6 md:gap-x-10 text-white text-sm md:text-base font-medium">
+   <nav class="flex flex-row items-center gap-x-5 sm:gap-x-10 text-white text-[13px] sm:text-base font-medium">
       {
          navItems.map(item => (
-            <a
-               class="py-2 relative border-sky-400 hover:scale-[1.10] hover:text-sky-400 transition duration-300 ease-in-out
-                        before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2.5px] before:bg-sky-400 
-                        before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300
-                     "
-               href={item.url}
-               aria-label={item.label}
-            >
-               {item.title}
-            </a>
+            item.icon ? (
+               <a
+                  class="py-2 relative border-sky-400 hover:scale-[1.10] hover:text-sky-400 transition duration-300 ease-in-out
+                           before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2.5px] before:bg-sky-400 
+                           before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300
+                        "
+                  href={item.url}
+                  aria-label={item.label}
+               >
+                  <item.icon class="sm:hidden size-6 stroke-[1.5]"/>
+                  <span class="hidden sm:inline">{item.title}</span>
+               </a>
+            ) : item.title === "Tech Stack" ? (
+               <a
+                  class="py-2 hidden sm:inline relative border-sky-400 hover:scale-[1.10] hover:text-sky-400 transition duration-300 ease-in-out
+                           before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2.5px] before:bg-sky-400 
+                           before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300
+                        "
+                  href={item.url}
+                  aria-label={item.label}
+               >
+                  <span>{item.title}</span>
+               </a>
+            ) : (
+               <a
+                  class="py-2 relative border-sky-400 hover:scale-[1.10] hover:text-sky-400 transition duration-300 ease-in-out
+                           before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2.5px] before:bg-sky-400 
+                           before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300
+                        "
+                  href={item.url}
+                  aria-label={item.label}
+               >
+                  <span>{item.title}</span>
+               </a>
+            )
          ))
       }
    </nav>
