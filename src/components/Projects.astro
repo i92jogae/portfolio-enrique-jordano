@@ -7,12 +7,28 @@ import CSSIcon from "../icons/CSS.astro"
 import HTMLIcon from "../icons/HTML.astro"
 import GitHub2Icon from "../icons/GitHub2.astro"
 import DiagonalArrowIcon from "../icons/DiagonalArrow.astro"
+import ViteIcon from "../icons/Vite.astro"
 
 const PROJECTS = [
+    {
+        title: 'Shopping Cart - Gestión de Estado Avanzada con React',
+        description: 'E-commerce con integración a API REST (FakeStore API), que implementa useContext + useReducer para gestión de estado predecible, custom hooks reutilizables (useCart, useFilters), manejo de llamadas asíncronas con useEffect, persistencia en localStorage de la cesta y arquitectura modular, también cuenta con una interfaz responsive y animaciones fluidas. Proyecto de práctica enfocado en patrones avanzados de React.',
+        github: 'https://github.com/i92jogae/react-shopping-cart',
+        demo: 'https://reactshoppingcart1.netlify.app/',
+        image: '/projects/shopping-cart.webp',
+        tags: [
+            {name: 'React', icon: ReactIcon}, 
+            {name: 'Vite', icon: ViteIcon}, 
+            {name: 'JavaScript', icon: JavaScriptIcon},
+            {name: 'HTML', icon: HTMLIcon},
+            {name: 'CSS', icon: CSSIcon},
+        ],
+    },
     {
         title:'TFG - Aplicación web de aprendizaje interactivo de Bases de Datos basada en la API de ChatGPT',
         description:'Aplicación didáctica que genera cuestionarios tipo test adaptativos mediante IA generativa. Asimismo, cuenta con un servicio de consultas asistido por IA (chatbot) y brinda al usuario un sistema de seguimiento de su progreso.',
         github:'https://github.com/i92jogae/TFG',
+        demo:'',
         image:'/projects/dblearning.webp',
         tags:[
             {name:'React', icon: ReactIcon}, 
@@ -27,8 +43,8 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({ image, title, description, tags}) => (
-        <article>
+    PROJECTS.map(({ image, title, github, demo, description, tags}) => (
+        <article class="[&:not(:last-child)]:mb-14">
             <h3 class="text-lg md:text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-base md:text-lg mb-4 text-pretty">{description}</p>
             <div class="flex md:flex-row flex-col gap-4 mb-5 justify-between">
@@ -42,21 +58,51 @@ const PROJECTS = [
                         </li>
                     ))}
                 </ul>
+                
+                <div class="flex gap-3 items-start">
+                    {demo && (
+                        <a 
+                            href={demo} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-fit flex items-center gap-1 text-neutral-200/90 hover:text-white hover:scale-105 transition duration-300"
+                        >
+                            <span class="text-sm md:text-base font-medium">Ver Demo</span>
+                            <DiagonalArrowIcon class="size-3 md:size-4"/>
+                        </a>
+                    )}
+                    <a 
+                        href={github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="w-fit flex items-start text-neutral-200/90 hover:text-white hover:scale-105 transition duration-300"
+                    >
+                        <GitHub2Icon class="size-7 md:size-8"/>
+                        <DiagonalArrowIcon class="size-3 md:size-4"/>
+                    </a>
+                </div>
+            </div>
+            
+            {demo ? (
                 <a 
-                    href="https://github.com/i92jogae/TFG" 
+                    href={demo} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="w-fit flex items-start text-neutral-200/90 hover:text-white hover:scale-105 transition duration-300"
+                    class="block"
                 >
-                    <GitHub2Icon class="size-7 md:size-8"/>
-                    <DiagonalArrowIcon class="size-3 md:size-4"/>
+                    <img 
+                        class="rounded shadow-2xl shadow-white/20 transition duration-500 ease-in-out transform hover:scale-[1.03] hover:shadow-white/40 cursor-pointer" 
+                        src={image} 
+                        alt={`Captura de pantalla del proyecto ${title}`} 
+                    />
                 </a>
-            </div>
-            <img 
-                class="rounded shadow-2xl shadow-white/20 transition duration-500 ease-in-out transform hover:scale-[1.03] hover:shadow-white/40 "/**cursor-pointer */ 
-                src={image} 
-                alt={`Captura de pantalla del proyecto ${image}`} 
-            />
+            ) : (
+                <img 
+                    class="rounded shadow-2xl shadow-white/20 transition duration-500 ease-in-out transform hover:scale-[1.03] hover:shadow-white/40" 
+                    src={image} 
+                    alt={`Captura de pantalla del proyecto ${title}`} 
+                />
+            )}
         </article>
     ))
 }
