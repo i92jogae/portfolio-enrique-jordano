@@ -2,46 +2,43 @@
 import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
-    {
-        date:'Junio 2024 - Actualidad',
-        title:'Junior Frontend Engineer',
-        company: 'NTT DATA',
-        description: 'Formo parte de un ambicioso proyecto de implantación de un sistema software para el servicio de emergencias 112 de Andalucía, centrándome en la integración de servicios acoplados al producto. Reforzando así, mis habilidades técnicas y mi conocimiento en el desarrollo e integración de sistemas.',
-        descriptionPoints: [
-            'Desarrollo de interfaces de usuario dinámicas y adaptables con React, JavaScript y Tailwind CSS, aplicando diseños responsive.',
-            'Gestión de estados y optimización del rendimiento con Context API, Redux y custom hooks.',
-            'Creación de pruebas unitarias con Vitest y cumplimiento de métricas de calidad con SonarQube.',
-            'Transpilación y empaquetado de proyectos para producción con herramientas como Vite y Webpack.',
-            'Gestión de versiones y colaboración en equipo con Git y GitLab.',
-            'Colaboración con el equipo de backend participando ocasionalmente en el desarrollo de APIs RESTful.',
-            'Gestión de bases de datos Oracle con DBeaver para pruebas y validación de servicios API.',
-            'Organización ágil de proyectos en sprints y seguimiento de tareas con Jira.',
-            'Despliegues y administración de entornos en Azure.'
-        ],
-    },
-    {
-        date: 'Abril 2023 - Mayo 2024',
-        title: 'Fullstack Developer Intern',
-        company: 'Konecta',
-        description: 'Desarrollé en equipo una plataforma web corporativa para la gestión vacacional de empleados, implementando soluciones escalables y reutilizables en el front-end y una arquitectura robusta en el back-end.',
-        descriptionPoints: [
-            'Desarrollé interfaces de usuario basadas en una arquitectura modular, creando componentes reutilizables y optimizando la experiencia de usuario con React, JavaScript, HTML y Tailwind CSS.',
-            'Implementé microservicios serverless en el back-end con JavaScript y AWS Lambda, siguiendo una arquitectura hexagonal facilitando la escalabilidad y mantenibilidad.',
-            'Mejoré la calidad y fiabilidad del código mediante el desarrollo de pruebas unitarias con Jest y Enzyme.',
-            'Trabajé con metodologías ágiles, cooperando en la planificación de sprints y gestionando tareas con Jira.',
-            'Gestioné el control de versiones con Git y Fork y trabajé siguiendo flujos de trabajo basados en ramas.'
-        ]
-    }
+  {
+    date: 'Junio 2024 - Junio 2026',
+    title: 'Junior Frontend Engineer',
+    company: 'NTT DATA',
+    description: 'Participé en proyectos tecnológicos de ámbito corporativo, combinando desarrollo frontend moderno con tareas de integración, calidad y colaboración con equipos backend.',
+    descriptionPoints: [
+      'Desarrollo de interfaces responsive y reutilizables con React, JavaScript y Tailwind CSS.',
+      'Gestión de estado y optimización del rendimiento con Context API, Redux y custom hooks.',
+      'Testing con Vitest y control de calidad mediante SonarQube.',
+      'Empaquetado y transpilación de proyectos con Vite y Webpack.',
+      'Trabajo colaborativo con Git, GitLab y flujos basados en ramas.',
+      'Integración con APIs REST y validación de servicios mediante Oracle y DBeaver.',
+      'Organización ágil en sprints, seguimiento de tareas con Jira y despliegues en Azure.'
+    ],
+  },
+  {
+    date: 'Abril 2023 - Mayo 2024',
+    title: 'Fullstack Developer Intern',
+    company: 'Konecta',
+    description: 'Desarrollé en equipo una plataforma web corporativa para la gestión vacacional de empleados, implementando soluciones escalables y reutilizables en el front-end y una arquitectura robusta en el back-end.',
+    descriptionPoints: [
+      'Creación de interfaces modulares con React, JavaScript, HTML y Tailwind CSS.',
+      'Implementación de microservicios serverless con JavaScript y AWS Lambda siguiendo arquitectura hexagonal.',
+      'Desarrollo de pruebas unitarias con Jest y Enzyme para mejorar fiabilidad del código.',
+      'Trabajo con metodologías ágiles, planificación de sprints y gestión de tareas con Jira.',
+      'Control de versiones con Git y Fork siguiendo flujos de trabajo por ramas.'
+    ]
+  }
 ]
 ---
-<ol class="relative border-s border-gray-200 dark:border-gray-700">        
-    {
-        EXPERIENCE.map(experience => (
-            <li class="mb-10 ms-5"> 
-                <ExperienceItem {...experience}/>
-            </li> 
-        ))
-    }          
-    
-</ol>
 
+<ol class="relative border-s border-white/10 pl-1">        
+  {
+    EXPERIENCE.map(experience => (
+      <li class="mb-10 ms-5 last:mb-0"> 
+        <ExperienceItem {...experience}/>
+      </li> 
+    ))
+  }          
+</ol>

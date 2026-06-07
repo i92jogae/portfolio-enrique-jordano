@@ -13,4 +13,4 @@ Las tecnologías utilizadas son:
 - CSS
 - TailwindCSS
 
-La página ya está desplegada! Visítala [aquí](https://enriquejordano.com/).
+La página ya está desplegada! Visítala [aquí](https://enriquejordano.netlify.app/).

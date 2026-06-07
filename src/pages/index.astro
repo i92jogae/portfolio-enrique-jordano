@@ -20,101 +20,101 @@ import TechStack from '../components/TechStack.astro';
 ---
 
 <Layout 
-	title="Enrique Jordano García | Full-Stack Developer & Software Engineer"
-	description="Portfolio de Enrique Jordano García, Ingeniero de Software especializado en desarrollo Full-Stack. Descubre mis proyectos y experiencia."
+  title="Enrique Jordano García | Frontend Developer React"
+  description="Portfolio de Enrique Jordano García, desarrollador frontend especializado en React, JavaScript, Tailwind CSS y aplicaciones web modernas."
 >
-	<main class="px-4">
-		<SectionContainer class="pt-32 md:pt-52 md:pb-24">
-			<div class="flex flex-row gap-4 flex-wrap items-center pb-4 lg:pb-7">
-				<h1 class="text-4xl md:text-5xl font-bold flex">
-					Enrique Jordano García 
-				</h1>
-				<a 
-					class="flex items-center"
-					href="https://www.linkedin.com/in/enrique-jordano-garcía"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Badge>Abierto a nuevas oportunidades</Badge>
-					
-				</a>
-			</div>
-			<h2 class="text-lg md:text-xl lg:text-2xl text-wrap max-w-[700px]">
-				<span class="text-sky-400 font-medium">+2 años de experiencia.</span>
-				<span class="text-yellow-200/90 font-medium">Ingeniero Informático y Desarrollador de Software</span>
-				<span class="opacity-80">de Córdoba, España. Especializado en desarrollo Frontend.</span>
-			</h2>
-			<nav class="flex gap-4 md:gap-5 mt-8 mb-5 md:mb-7 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/enrique-jordano-garcía">
-					<LinkedInIcon class="size-4 lg:size-6"/>
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/i92jogae">
-					<GitHubIcon class="size-4 md:size-6"/>
-					GitHub
-				</SocialPill>
-				<SocialPill href="mailto:enriquejordanogarcia@gmail.com">
-					<MailIcon class="size-4 lg:size-6"/>
-					enriquejordanogarcia@gmail.com
-				</SocialPill>
-			</nav>
-			
-			<a
-				class="w-fit flex flex-row items-center gap-1 rounded-lg text-xs md:text-base py-2 px-3 md:py-3 md:px-3 hover:bg-gray-300 bg-white text-neutral-900 font-semibold transition"
-				href="https://drive.google.com/file/d/1UAPnoVvQQTm-Dx5d3qQdK4jsAJBgzbtD/view?usp=sharing"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<DownloadIcon class="size-4 md:size-6"/>
-				Descarga mi CV
-			</a>
-			
-		</SectionContainer>
+  <main id="top" class="px-4">
+    <SectionContainer class="relative pt-32 md:pt-44 md:pb-24">
+      <div class="absolute -left-20 top-28 -z-10 size-72 rounded-full bg-sky-500/20 blur-3xl"></div>
+      <div class="absolute right-0 top-40 -z-10 size-72 rounded-full bg-violet-500/10 blur-3xl"></div>
 
-		<SectionContainer id="experiencia">
-			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
-				<BuildingIcon class="md:size-9 size-8"/>
-				Experiencia laboral
-			</h2>
-			<Experience/>
-		</SectionContainer>
+      <div class="mb-5 flex flex-row flex-wrap items-center gap-4 lg:mb-7">
+        <h1 class="max-w-4xl text-balance text-4xl font-black tracking-tight text-white md:text-6xl">
+          Enrique Jordano García
+        </h1>
+        <a class="flex items-center" href="https://www.linkedin.com/in/enrique-jordano-garcía" target="_blank" rel="noopener noreferrer">
+          <Badge>Abierto a nuevas oportunidades</Badge>
+        </a>
+      </div>
 
-		<SectionContainer id="proyectos">
-			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
-				<IdeaIcon class="md:size-9 size-8"/>
-				Proyectos
-			</h2>
-			<p class="text-base md:text-lg text-gray-300 mb-4">
-				Actualmente estoy trabajando en ampliar mi portfolio con nuevos proyectos. ¡Pronto habrá más novedades!
-			</p>
-			<Projects/>
-		</SectionContainer>
+      <h2 class="max-w-[820px] text-pretty text-lg leading-relaxed text-white/78 md:text-xl lg:text-2xl">
+        <span class="font-bold text-sky-300">Frontend Developer con +2 años de experiencia.</span>
+        <span class="font-semibold text-white"> Especializado en React, JavaScript y desarrollo de interfaces modernas,</span>
+        <span> con foco en buenas prácticas, rendimiento, experiencia de usuario y código mantenible.</span>
+      </h2>
 
-		<SectionContainer id="tech-stack">
-			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
-				<CodeIcon class="md:size-9 size-8"/>
-				Tech stack
-			</h2>
-			<p class="text-base md:text-lg mb-4">
-				Estas son algunas de las tecnologías clave en mis proyectos y en mi desarrollo profesional.
-			</p>
-			<TechStack/>
-		</SectionContainer>
+      <nav class="mt-8 flex flex-wrap gap-4 md:gap-5">
+        <SocialPill href="https://www.linkedin.com/in/enrique-jordano-garcía">
+          <LinkedInIcon class="size-4 lg:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/i92jogae">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:enriquejordanogarcia@gmail.com">
+          <MailIcon class="size-4 lg:size-6" />
+          enriquejordanogarcia@gmail.com
+        </SocialPill>
+      </nav>
 
-		<SectionContainer id="sobre-mi">
-			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex gap-x-2 items-center">
-				<PersonIcon class="md:size-9 size-8"/>
-				Sobre mí
-			</h2>
-			<AboutMe/>
-		</SectionContainer>
+      <a
+        class="mt-6 inline-flex w-fit flex-row items-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-bold text-slate-950 shadow-xl shadow-white/10 transition hover:-translate-y-0.5 hover:bg-sky-100 md:text-base"
+        href="https://drive.google.com/file/d/1UAPnoVvQQTm-Dx5d3qQdK4jsAJBgzbtD/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <DownloadIcon class="size-4 md:size-6" />
+        Descarga mi CV
+      </a>
+    </SectionContainer>
 
-		<SectionContainer id="contacto" class="pb-20 md:pb-24 flex flex-col items-center text-center">
-			<h2 class="text-3xl md:text-4xl font-semibold mb-7 flex flex-col gap-y-4 items-center">
-				<ContactIcon class="size-14 md:size-16"/>
-				Contacto
-			</h2>
-			<Contact/>
-		</SectionContainer>
-	</main>
+    <SectionContainer id="experiencia">
+      <h2 class="mb-8 flex items-center gap-x-2 text-3xl font-bold tracking-tight md:text-4xl">
+        <BuildingIcon class="size-8 text-sky-200 md:size-9" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <div class="mb-8 flex flex-col gap-3 md:mb-10">
+        <h2 class="flex items-center gap-x-2 text-3xl font-bold tracking-tight md:text-4xl">
+          <IdeaIcon class="size-8 text-sky-200 md:size-9" />
+          Proyectos destacados
+        </h2>
+        <p class="max-w-3xl text-pretty text-base leading-relaxed text-white/65 md:text-lg">
+          Proyectos desarrollados con React enfocados en arquitectura frontend, integración con APIs, optimización, gestión de estado y UI responsive.
+        </p>
+      </div>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="tech-stack">
+      <h2 class="mb-7 flex items-center gap-x-2 text-3xl font-bold tracking-tight md:text-4xl">
+        <CodeIcon class="size-8 text-sky-200 md:size-9" />
+        Tech stack
+      </h2>
+      <p class="mb-5 max-w-3xl text-pretty text-base leading-relaxed text-white/65 md:text-lg">
+        Tecnologías y herramientas que utilizo en proyectos personales y experiencia profesional.
+      </p>
+      <TechStack />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="mb-7 flex items-center gap-x-2 text-3xl font-bold tracking-tight md:text-4xl">
+        <PersonIcon class="size-8 text-sky-200 md:size-9" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="contacto" class="pb-20 text-center md:pb-24">
+      <h2 class="mb-7 flex flex-col items-center gap-y-4 text-3xl font-bold tracking-tight md:text-4xl">
+        <ContactIcon class="size-14 text-sky-200 md:size-16" />
+        Contacto
+      </h2>
+      <Contact />
+    </SectionContainer>
+  </main>
 </Layout>

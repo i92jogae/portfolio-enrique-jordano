@@ -10,99 +10,161 @@ import DiagonalArrowIcon from "../icons/DiagonalArrow.astro"
 import ViteIcon from "../icons/Vite.astro"
 
 const PROJECTS = [
-    {
-        title: 'Shopping Cart - Gestión de Estado Avanzada con React',
-        description: 'E-commerce con integración a API REST (DummyJSON API), que implementa useContext + useReducer para gestión de estado predecible, custom hooks reutilizables (useCart, useFilters), manejo de llamadas asíncronas con useEffect, persistencia en localStorage de la cesta y arquitectura modular, también cuenta con una interfaz responsive y animaciones fluidas. Proyecto de práctica enfocado en patrones avanzados de React.',
-        github: 'https://github.com/i92jogae/react-shopping-cart',
-        demo: 'https://reactshoppingcart1.netlify.app/',
-        image: '/projects/shopping-cart.webp',
-        tags: [
-            {name: 'React', icon: ReactIcon}, 
-            {name: 'Vite', icon: ViteIcon}, 
-            {name: 'JavaScript', icon: JavaScriptIcon},
-            {name: 'HTML', icon: HTMLIcon},
-            {name: 'CSS', icon: CSSIcon},
-        ],
-    },
-    {
-        title:'TFG - Aplicación web de aprendizaje interactivo de Bases de Datos basada en la API de ChatGPT',
-        description:'Aplicación didáctica que genera cuestionarios tipo test adaptativos mediante IA generativa. Asimismo, cuenta con un servicio de consultas asistido por IA (chatbot) y brinda al usuario un sistema de seguimiento de su progreso.',
-        github:'https://github.com/i92jogae/TFG',
-        demo:'',
-        image:'/projects/dblearning.webp',
-        tags:[
-            {name:'React', icon: ReactIcon}, 
-            {name:'Express.js', icon: ExpressJSIcon}, 
-            {name:'JavaScript', icon: JavaScriptIcon},
-            {name:'HTML', icon: HTMLIcon},
-            {name:'CSS', icon: CSSIcon},
-            {name:'MySQL', icon: MySQLIcon},
-        ],
-    },
+  {
+    title: 'React Movie Search',
+    subtitle: 'Buscador de películas con React, custom hooks y OMDb API',
+    description: 'Aplicación frontend desplegada en Netlify que consume la OMDb API para buscar películas. Implementa debounce para optimizar peticiones, evita búsquedas duplicadas, ordena resultados, gestiona estados de carga/error/sin resultados y desacopla la UI del contrato de la API mediante una capa de servicio.',
+    github: 'https://github.com/i92jogae/react-movie-search',
+    demo: 'https://reactmoviessearch.netlify.app',
+    image: '/projects/movie-search.webp',
+    featured: true,
+    highlights: ['Custom hooks', 'Debounce', 'API REST', 'useMemo/useCallback', 'Responsive UI'],
+    tags: [
+      { name: 'React', icon: ReactIcon },
+      { name: 'Vite', icon: ViteIcon },
+      { name: 'JavaScript', icon: JavaScriptIcon },
+      { name: 'HTML', icon: HTMLIcon },
+      { name: 'CSS', icon: CSSIcon },
+    ],
+  },
+  {
+    title: 'Shopping Cart',
+    subtitle: 'E-commerce con gestión de estado avanzada en React',
+    description: 'E-commerce con integración a DummyJSON API. Implementa useContext + useReducer para una gestión de estado predecible, custom hooks reutilizables, persistencia en localStorage, filtros, arquitectura modular, interfaz responsive y animaciones fluidas.',
+    github: 'https://github.com/i92jogae/react-shopping-cart',
+    demo: 'https://reactshoppingcart1.netlify.app/',
+    image: '/projects/shopping-cart.webp',
+    featured: true,
+    highlights: ['useReducer', 'Context API', 'localStorage', 'Custom hooks', 'REST API'],
+    tags: [
+      { name: 'React', icon: ReactIcon },
+      { name: 'Vite', icon: ViteIcon },
+      { name: 'JavaScript', icon: JavaScriptIcon },
+      { name: 'HTML', icon: HTMLIcon },
+      { name: 'CSS', icon: CSSIcon },
+    ],
+  },
+  {
+    title: 'TFG - DB Learning',
+    subtitle: 'Aplicación web de aprendizaje interactivo con IA',
+    description: 'Aplicación didáctica que genera cuestionarios tipo test adaptativos mediante IA generativa. Incluye un chatbot de consultas asistido por IA y un sistema de seguimiento de progreso del usuario.',
+    github: 'https://github.com/i92jogae/TFG',
+    demo: '',
+    image: '/projects/dblearning.webp',
+    featured: false,
+    highlights: ['Full stack', 'IA generativa', 'Chatbot', 'MySQL', 'Express.js'],
+    tags: [
+      { name: 'React', icon: ReactIcon },
+      { name: 'Express.js', icon: ExpressJSIcon },
+      { name: 'JavaScript', icon: JavaScriptIcon },
+      { name: 'HTML', icon: HTMLIcon },
+      { name: 'CSS', icon: CSSIcon },
+      { name: 'MySQL', icon: MySQLIcon },
+    ],
+  },
 ]
 ---
 
-{
-    PROJECTS.map(({ image, title, github, demo, description, tags}) => (
-        <article class="[&:not(:last-child)]:mb-14">
-            <h3 class="text-lg md:text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-base md:text-lg mb-4 text-pretty">{description}</p>
-            <div class="flex md:flex-row flex-col gap-4 mb-5 justify-between">
-                <ul class="flex gap-2 flex-wrap">
-                    {tags.map(tag => (
-                        <li>
-                            <span class="flex items-center gap-x-2 rounded-lg text-xs md:text-sm py-1 px-2 border border-white/10 bg-white/5 ">
-                                <tag.icon class="size-5 md:size-6 text-yellow-200"/>
-                                {tag.name}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-                
-                <div class="flex gap-3 items-start">
-                    {demo && (
-                        <a 
-                            href={demo} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="w-fit flex items-center gap-1 text-neutral-200/90 hover:text-white hover:scale-105 transition duration-300"
-                        >
-                            <span class="text-sm md:text-base font-medium">Ver Demo</span>
-                            <DiagonalArrowIcon class="size-3 md:size-4"/>
-                        </a>
-                    )}
-                    <a 
-                        href={github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        class="w-fit flex items-start text-neutral-200/90 hover:text-white hover:scale-105 transition duration-300"
-                    >
-                        <GitHub2Icon class="size-7 md:size-8"/>
-                        <DiagonalArrowIcon class="size-3 md:size-4"/>
-                    </a>
-                </div>
+<div class="grid gap-7">
+  {
+    PROJECTS.map(({ image, title, subtitle, github, demo, description, tags, highlights, featured }) => (
+      <article class={`group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.055] shadow-2xl shadow-black/20 backdrop-blur transition duration-500 hover:-translate-y-1 hover:border-sky-300/40 hover:bg-white/[0.075] ${featured ? 'md:grid md:grid-cols-[1.05fr_0.95fr]' : ''}`}>
+        <div class="absolute inset-0 bg-gradient-to-br from-sky-400/10 via-transparent to-amber-300/5 opacity-0 transition duration-500 group-hover:opacity-100"></div>
+
+        <div class="relative flex flex-col justify-between p-6 md:p-7">
+          <div>
+            <div class="mb-4 flex flex-wrap items-center gap-2">
+              {featured && (
+                <span class="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-sky-200">
+                  Featured
+                </span>
+              )}
+              {demo && (
+                <span class="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold text-emerald-200">
+                  Live demo
+                </span>
+              )}
             </div>
-            
-            {demo ? (
-                <a 
-                    href={demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="block"
-                >
-                    <img 
-                        class="rounded shadow-2xl shadow-white/20 transition duration-500 ease-in-out transform hover:scale-[1.03] hover:shadow-white/40 cursor-pointer" 
-                        src={image} 
-                        alt={`Captura de pantalla del proyecto ${title}`} 
-                    />
+
+            <h3 class="text-2xl font-bold tracking-tight text-white md:text-3xl">{title}</h3>
+            <p class="mt-2 text-sm font-semibold text-sky-200 md:text-base">{subtitle}</p>
+            <p class="mt-4 text-pretty text-sm leading-relaxed text-white/72 md:text-base">{description}</p>
+
+            <ul class="mt-5 flex flex-wrap gap-2">
+              {highlights.map((highlight) => (
+                <li class="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1 text-xs font-medium text-white/75">
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mt-6 flex flex-col gap-5">
+            <ul class="flex flex-wrap gap-2">
+              {tags.map(tag => (
+                <li>
+                  <span class="inline-flex items-center gap-x-2 rounded-xl border border-white/10 bg-slate-950/40 px-2.5 py-1.5 text-xs font-medium text-white/85 md:text-sm">
+                    <tag.icon class="size-5 text-sky-200 md:size-6" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="flex flex-wrap items-center gap-3">
+              {demo && (
+                <a href={demo} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-sky-400 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg shadow-sky-500/20 transition hover:-translate-y-0.5 hover:bg-sky-300">
+                  Ver demo
+                  <DiagonalArrowIcon class="size-3.5" />
                 </a>
+              )}
+              <a href={github} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-bold text-white/90 transition hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.1]">
+                <GitHub2Icon class="size-5" />
+                Código
+                <DiagonalArrowIcon class="size-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative min-h-[260px] border-t border-white/10 bg-slate-950/40 p-4 md:border-l md:border-t-0 md:p-5">
+          {image ? (
+            demo ? (
+              <a href={demo} target="_blank" rel="noopener noreferrer" class="block h-full">
+                <img class="h-full min-h-[230px] max-h-[540px] w-full rounded-2xl border border-white/10 object-cover object-top shadow-2xl shadow-black/35 transition duration-500 group-hover:scale-[1.02]" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+              </a>
             ) : (
-                <img 
-                    class="rounded shadow-2xl shadow-white/20 transition duration-500 ease-in-out transform hover:scale-[1.03] hover:shadow-white/40" 
-                    src={image} 
-                    alt={`Captura de pantalla del proyecto ${title}`} 
-                />
-            )}
-        </article>
+              <img class="h-full min-h-[230px] max-h-[540px] w-full rounded-2xl border border-white/10 object-cover object-top shadow-2xl shadow-black/35 transition duration-500 group-hover:scale-[1.02]" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+            )
+          ) : (
+            <a href={demo} target="_blank" rel="noopener noreferrer" class="flex h-full min-h-[260px] items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-sky-200 via-white to-blue-100 p-5 shadow-2xl shadow-black/30 transition duration-500 group-hover:scale-[1.02]">
+              <div class="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-4 text-slate-950 shadow-2xl">
+                <div class="mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
+                  <span class="size-3 rounded-full bg-red-400"></span>
+                  <span class="size-3 rounded-full bg-amber-400"></span>
+                  <span class="size-3 rounded-full bg-emerald-400"></span>
+                  <span class="ml-auto rounded-full bg-slate-100 px-3 py-1 text-[10px] font-semibold text-slate-500">OMDb API</span>
+                </div>
+                <div class="mb-4 rounded-xl bg-slate-50 p-4 text-center">
+                  <p class="text-xs font-bold uppercase tracking-[0.22em] text-blue-600">React Movie Search</p>
+                  <p class="mt-2 text-2xl font-black tracking-tight">Find your next movie</p>
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+                  {[1, 2, 3].map(() => (
+                    <div class="overflow-hidden rounded-xl bg-slate-100">
+                      <div class="aspect-[2/3] bg-gradient-to-br from-blue-200 to-slate-200"></div>
+                      <div class="space-y-1 p-2">
+                        <div class="h-2 rounded bg-slate-300"></div>
+                        <div class="h-2 w-2/3 rounded bg-slate-200"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </a>
+          )}
+        </div>
+      </article>
     ))
-}
+  }
+</div>

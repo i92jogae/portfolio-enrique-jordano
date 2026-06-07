@@ -1,35 +1,30 @@
 ---
- const personalImageAlt = "Enrique Jordano"
+const personalImageAlt = "Enrique Jordano"
 ---
 
-<article class="flex flex-col items-center justify-center gap-8  md:flex-row">
-    <div
-      class="[&>p]:mb-4 text-base [&>p>strong]:text-yellow-200 [&>p>strong]:font-medium md:[&>p>strong]:font-semibold text-pretty order-2 md:order-1"
-    >
-      <p>
-        Siempre me ha fascinado la tecnología por su capacidad para mejorar experiencias y optimizar procesos. 
-        Esto me llevó a <strong>especializarme en el desarrollo Frontend</strong>, creando experiencias de usuario intuitivas, accesibles y eficientes. 
-        Además, mi <strong>experiencia en desarrollo Full-Stack</strong> me permite entender el funcionamiento global de las aplicaciones y 
-        abordar los proyectos de forma integral.
-      </p>
-  
-      <p>
-        Actualmente, estoy enfocado en perfeccionar mis habilidades en tecnologías como <strong>React, 
-        Tailwind CSS, Redux, Zustand</strong> y herramientas modernas de desarrollo web, al mismo tiempo que amplío mis conocimientos 
-        en <strong>tecnologías backend emergentes.</strong> 
-      </p>
-  
-      <p>
-        Soy una persona <strong>comprometida y constante</strong>. Disfruto <strong>resolviendo problemas complejos 
-        y colaborando en equipo</strong> para crear soluciones de calidad. Busco seguir creciendo en entornos dinámicos
-        donde pueda aportar valor y aprender continuamente.
-      </p>
+<article class="grid items-center gap-8 md:grid-cols-[1.4fr_0.8fr]">
+  <div class="order-2 rounded-3xl border border-white/10 bg-white/[0.05] p-6 text-pretty text-base leading-relaxed text-white/80 shadow-2xl shadow-black/20 backdrop-blur md:order-1 md:p-8 [&>p]:mb-4 [&>p:last-child]:mb-0 [&>p>strong]:font-semibold [&>p>strong]:text-sky-200">
+    <p>
+      Siempre me ha fascinado la tecnología por su capacidad para mejorar experiencias y optimizar procesos. Esto me llevó a <strong>especializarme en desarrollo frontend</strong>, creando interfaces intuitivas, accesibles y eficientes.
+    </p>
+
+    <p>
+      Actualmente estoy centrado en reforzar mi perfil con <strong>React, JavaScript, Tailwind CSS, testing, buenas prácticas y arquitectura frontend</strong>, construyendo proyectos de portfolio donde pueda demostrar criterio técnico y atención al detalle.
+    </p>
+
+    <p>
+      Soy una persona <strong>constante, resolutiva y orientada al aprendizaje</strong>. Disfruto trabajando en equipo, separando responsabilidades y convirtiendo problemas complejos en soluciones claras y mantenibles.
+    </p>
+  </div>
+
+  <div class="order-1 mx-auto md:order-2">
+    <div class="relative">
+      <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-sky-400/25 via-violet-400/10 to-amber-300/20 blur-2xl"></div>
+      <img 
+        src="/images/personal.webp" 
+        alt={personalImageAlt} 
+        class="relative aspect-[4/5] w-56 rounded-3xl border border-white/10 object-cover object-[50%_25%] shadow-2xl shadow-black/40 grayscale transition duration-500 hover:scale-[1.03] hover:grayscale-0 md:w-64" 
+      />
     </div>
-    
-    <img 
-      src="/images/personal.webp" 
-      alt={personalImageAlt} 
-      class="order-1 object-[50%_20%] md:object-[50%_30%] object-cover w-52 md:w-60 h-full md:order-2 lg:w-60 aspect-square md:aspect-[9/12] rounded-xl grayscale hover:shadow-white/15 hover:shadow-2xl hover:scale-105 hover:grayscale-0 transition duration-300" 
-    >
-  
-  </article>
+  </div>
+</article>
