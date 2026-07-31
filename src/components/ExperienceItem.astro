@@ -3,11 +3,15 @@ interface Props {
   title: string
   company: string
   description: string
-  descriptionPoints: string[] 
+  descriptionPoints: string[]
+  tags?: Array<{
+    name: string
+    icon?: any
+  }>
   link?: string
   date: string
 }
-const { title, company, description, descriptionPoints, link, date} = Astro.props
+const { title, company, description, descriptionPoints, tags = [], link, date } = Astro.props
 ---
 
 <div class="absolute -start-1.5 mt-8 size-3 rounded-full border border-sky-200 bg-sky-300 shadow-lg shadow-sky-400/40"></div>
@@ -22,6 +26,16 @@ const { title, company, description, descriptionPoints, link, date} = Astro.prop
     <time class="mt-2 block text-xs font-medium leading-none text-white/50 md:text-sm">
       {date}
     </time>
+    <ul class="mt-5 flex flex-wrap gap-2" aria-label={`Tecnologías utilizadas en ${company}`}>
+      {tags.map((tag) => (
+        <li>
+          <span class="inline-flex items-center gap-x-2 rounded-xl border border-white/10 bg-slate-950/40 px-2.5 py-1.5 text-xs font-medium text-white/85 md:text-sm">
+            {tag.icon && <tag.icon class="size-5 text-sky-200 md:size-6" />}
+            {tag.name}
+          </span>
+        </li>
+      ))}
+    </ul>
   </div>
 
   <div class="md:col-span-2">
