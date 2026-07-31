@@ -8,24 +8,25 @@ import TailwindCSSIcon from "../icons/Tailwind_CSS.astro"
 import JestIcon from "../icons/Jest.astro"
 import SonarQubeIcon from "../icons/SonarQube.astro"
 import GitIcon from "../icons/Git.astro"
+import GitlabIcon from "../icons/Gitlab.astro"
+import JiraIcon from "../icons/Jira.astro"
+import ReduxIcon from "../icons/Redux.astro"
+import AWSIcon from "../icons/AWS.astro"
+import AzureIcon from "../icons/Azure.astro"
 
 const EXPERIENCE = [
   {
     date: 'Junio 2024 - Junio 2026',
     title: 'Junior Frontend Engineer',
     company: 'NTT DATA',
-    description: 'Participé en un proyecto tecnológico de ámbito público para la implantación y evolución de un sistema software utilizado en el servicio de emergencias 112 de Andalucía, colaborando en desarrollo frontend, integración de servicios y validación funcional de componentes conectados con distintos sistemas.',
+    description: 'Participé en la implantación y evolución de un sistema software para el servicio de emergencias 112 de Andalucía, colaborando en desarrollo frontend, integración de servicios y validación funcional.',
     descriptionPoints: [
-      'Desarrollo de interfaces dinámicas, responsive y reutilizables con React, JavaScript, HTML, CSS y Tailwind CSS, aplicando componentes, hooks y buenas prácticas frontend.',
-      'Gestión de estado en React mediante hooks, useContext y Redux, incluyendo estado global de aplicación y patrones adaptados a cada funcionalidad.',
-      'Extracción de lógica reutilizable con custom hooks y useReducer para centralizar reglas de actualización, mejorar la escalabilidad y separar lógica de negocio, datos y presentación.',
-      'Integración con APIs REST y validación de servicios junto al equipo backend, usando Oracle y DBeaver para consultas, comprobación de datos y pruebas funcionales.',
-      'Optimización de interfaces y flujos de búsqueda mediante debounce para reducir peticiones innecesarias, useMemo para memorizar cálculos derivados y useCallback para mantener referencias estables.',
-      'Aplicación de lazy loading para diferir la carga de componentes y mejorar la eficiencia inicial.',
-      'Desarrollo de pruebas unitarias y de integración con Jest y Vitest, mejorando la fiabilidad del código y la detección temprana de errores.',
-      'Revisión de calidad de código con SonarQube, atendiendo a mantenibilidad, duplicidad, cobertura y buenas prácticas.',
-      'Trabajo colaborativo con Git, GitLab y Jira, siguiendo flujos de ramas, control de versiones, planificación por sprints y seguimiento de tareas.',
-      'Apoyo en despliegues, revisión de entornos y seguimiento de incidencias en Azure.'
+      'Desarrollo de interfaces dinámicas, responsive y reutilizables con React, JavaScript, HTML, CSS y Tailwind CSS.',
+      'Gestión de estado y lógica reutilizable mediante hooks, useContext, Redux, custom hooks y useReducer.',
+      'Integración y validación de APIs REST junto al equipo backend, utilizando Oracle y DBeaver para consultas y comprobación de datos.',
+      'Optimización de búsquedas, renderizado y carga de componentes mediante debounce, useMemo, useCallback y lazy loading.',
+      'Desarrollo de pruebas con Jest y Vitest y revisión de calidad de código mediante SonarQube.',
+      'Trabajo colaborativo con Git, GitLab y Jira, además de apoyo en despliegues y seguimiento de incidencias en Azure.'
     ],
     tags: [
       { name: 'React', icon: ReactIcon },
@@ -33,13 +34,13 @@ const EXPERIENCE = [
       { name: 'HTML', icon: HTMLIcon },
       { name: 'CSS', icon: CSSIcon },
       { name: 'Tailwind CSS', icon: TailwindCSSIcon },
-      { name: 'Redux' },
+      { name: 'Redux', icon: ReduxIcon },
       { name: 'Jest / Vitest', icon: JestIcon },
       { name: 'SonarQube', icon: SonarQubeIcon },
-      { name: 'Oracle / DBeaver' },
-      { name: 'Git / GitLab', icon: GitIcon },
-      { name: 'Jira' },
-      { name: 'Azure' },
+      { name: 'Git', icon: GitIcon },
+      { name: 'GitLab', icon: GitlabIcon },
+      { name: 'Jira', icon: JiraIcon },
+      { name: 'Azure', icon: AzureIcon },
     ],
   },
   {
@@ -59,10 +60,10 @@ const EXPERIENCE = [
       { name: 'JavaScript', icon: JavaScriptIcon },
       { name: 'HTML', icon: HTMLIcon },
       { name: 'Tailwind CSS', icon: TailwindCSSIcon },
-      { name: 'AWS Lambda' },
+      { name: 'AWS', icon: AWSIcon },
       { name: 'Jest / Enzyme', icon: JestIcon },
       { name: 'Git / Fork', icon: GitIcon },
-      { name: 'Jira' },
+      { name: 'Jira', icon: JiraIcon },
     ]
   }
 ]
