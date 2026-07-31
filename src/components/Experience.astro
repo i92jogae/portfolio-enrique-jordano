@@ -1,20 +1,45 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+import ReactIcon from "../icons/React.astro"
+import JavaScriptIcon from "../icons/JavaScript.astro"
+import HTMLIcon from "../icons/HTML.astro"
+import CSSIcon from "../icons/CSS.astro"
+import TailwindCSSIcon from "../icons/Tailwind_CSS.astro"
+import JestIcon from "../icons/Jest.astro"
+import SonarQubeIcon from "../icons/SonarQube.astro"
+import GitIcon from "../icons/Git.astro"
 
 const EXPERIENCE = [
   {
     date: 'Junio 2024 - Junio 2026',
     title: 'Junior Frontend Engineer',
     company: 'NTT DATA',
-    description: 'Participé en proyectos tecnológicos de ámbito corporativo, combinando desarrollo frontend moderno con tareas de integración, calidad y colaboración con equipos backend.',
+    description: 'Participé en un proyecto tecnológico de ámbito público para la implantación y evolución de un sistema software utilizado en el servicio de emergencias 112 de Andalucía, colaborando en desarrollo frontend, integración de servicios y validación funcional de componentes conectados con distintos sistemas.',
     descriptionPoints: [
-      'Desarrollo de interfaces responsive y reutilizables con React, JavaScript y Tailwind CSS.',
-      'Gestión de estado y optimización del rendimiento con Context API, Redux y custom hooks.',
-      'Testing con Vitest y control de calidad mediante SonarQube.',
-      'Empaquetado y transpilación de proyectos con Vite y Webpack.',
-      'Trabajo colaborativo con Git, GitLab y flujos basados en ramas.',
-      'Integración con APIs REST y validación de servicios mediante Oracle y DBeaver.',
-      'Organización ágil en sprints, seguimiento de tareas con Jira y despliegues en Azure.'
+      'Desarrollo de interfaces dinámicas, responsive y reutilizables con React, JavaScript, HTML, CSS y Tailwind CSS, aplicando componentes, hooks y buenas prácticas frontend.',
+      'Gestión de estado en React mediante hooks, useContext y Redux, incluyendo estado global de aplicación y patrones adaptados a cada funcionalidad.',
+      'Extracción de lógica reutilizable con custom hooks y useReducer para centralizar reglas de actualización, mejorar la escalabilidad y separar lógica de negocio, datos y presentación.',
+      'Integración con APIs REST y validación de servicios junto al equipo backend, usando Oracle y DBeaver para consultas, comprobación de datos y pruebas funcionales.',
+      'Optimización de interfaces y flujos de búsqueda mediante debounce para reducir peticiones innecesarias, useMemo para memorizar cálculos derivados y useCallback para mantener referencias estables.',
+      'Aplicación de lazy loading para diferir la carga de componentes y mejorar la eficiencia inicial.',
+      'Desarrollo de pruebas unitarias y de integración con Jest y Vitest, mejorando la fiabilidad del código y la detección temprana de errores.',
+      'Revisión de calidad de código con SonarQube, atendiendo a mantenibilidad, duplicidad, cobertura y buenas prácticas.',
+      'Trabajo colaborativo con Git, GitLab y Jira, siguiendo flujos de ramas, control de versiones, planificación por sprints y seguimiento de tareas.',
+      'Apoyo en despliegues, revisión de entornos y seguimiento de incidencias en Azure.'
+    ],
+    tags: [
+      { name: 'React', icon: ReactIcon },
+      { name: 'JavaScript', icon: JavaScriptIcon },
+      { name: 'HTML', icon: HTMLIcon },
+      { name: 'CSS', icon: CSSIcon },
+      { name: 'Tailwind CSS', icon: TailwindCSSIcon },
+      { name: 'Redux' },
+      { name: 'Jest / Vitest', icon: JestIcon },
+      { name: 'SonarQube', icon: SonarQubeIcon },
+      { name: 'Oracle / DBeaver' },
+      { name: 'Git / GitLab', icon: GitIcon },
+      { name: 'Jira' },
+      { name: 'Azure' },
     ],
   },
   {
@@ -28,6 +53,16 @@ const EXPERIENCE = [
       'Desarrollo de pruebas unitarias con Jest y Enzyme para mejorar fiabilidad del código.',
       'Trabajo con metodologías ágiles, planificación de sprints y gestión de tareas con Jira.',
       'Control de versiones con Git y Fork siguiendo flujos de trabajo por ramas.'
+    ],
+    tags: [
+      { name: 'React', icon: ReactIcon },
+      { name: 'JavaScript', icon: JavaScriptIcon },
+      { name: 'HTML', icon: HTMLIcon },
+      { name: 'Tailwind CSS', icon: TailwindCSSIcon },
+      { name: 'AWS Lambda' },
+      { name: 'Jest / Enzyme', icon: JestIcon },
+      { name: 'Git / Fork', icon: GitIcon },
+      { name: 'Jira' },
     ]
   }
 ]
