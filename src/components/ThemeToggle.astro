@@ -1,0 +1,53 @@
+<button
+  id="theme-toggle"
+  type="button"
+  class="group relative inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-cyan-700/20 bg-white/70 text-slate-700 shadow-lg shadow-cyan-900/10 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:border-cyan-500/50 hover:text-cyan-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-50 dark:border-cyan-300/20 dark:bg-slate-950/55 dark:text-cyan-100 dark:shadow-cyan-400/10 dark:hover:border-cyan-300/60 dark:hover:text-cyan-200 dark:focus-visible:ring-cyan-300 dark:focus-visible:ring-offset-slate-950"
+  aria-label="Cambiar tema de color"
+  aria-pressed="false"
+  title="Cambiar tema"
+>
+  <svg class="size-5 dark:hidden" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+  </svg>
+  <svg class="hidden size-5 dark:block" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+  </svg>
+  <span class="sr-only">Cambiar tema</span>
+</button>
+
+<script>
+  const themeToggle = document.querySelector<HTMLButtonElement>('#theme-toggle')
+  const themeColorMeta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+
+  const updateToggle = () => {
+    if (!themeToggle) return
+
+    const isDark = document.documentElement.classList.contains('dark')
+    themeToggle.setAttribute('aria-pressed', String(isDark))
+    themeToggle.setAttribute('aria-label', isDark ? 'Activar tema claro' : 'Activar tema oscuro')
+    themeToggle.title = isDark ? 'Activar tema claro' : 'Activar tema oscuro'
+    themeColorMeta?.setAttribute('content', isDark ? '#020617' : '#f4faff')
+  }
+
+  const applyTheme = (theme: 'light' | 'dark', persist = true) => {
+    const isDark = theme === 'dark'
+    document.documentElement.classList.toggle('dark', isDark)
+    document.documentElement.style.colorScheme = theme
+
+    if (persist) localStorage.setItem('theme', theme)
+    updateToggle()
+  }
+
+  themeToggle?.addEventListener('click', () => {
+    const nextTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark'
+    applyTheme(nextTheme)
+  })
+
+  systemTheme.addEventListener('change', (event) => {
+    if (!localStorage.getItem('theme')) applyTheme(event.matches ? 'dark' : 'light', false)
+  })
+
+  updateToggle()
+</script>
