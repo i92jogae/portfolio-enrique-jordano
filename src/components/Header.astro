@@ -2,6 +2,7 @@
 import LogoIcon from "../icons/Logo.astro";
 import Mail2 from "../icons/Mail2.astro";
 import Person from "../icons/Person.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 const navItems = [
   { title: "Experiencia", label: "experiencia", url: "/#experiencia" },
   { title: "Proyectos", label: "proyectos", url: "/#proyectos" },
@@ -11,28 +12,31 @@ const navItems = [
 ]
 ---
 
-<header class="fixed left-0 top-0 z-50 flex w-full items-center justify-center border-b border-white/10 bg-slate-950/60 px-4 py-3 shadow-lg shadow-black/10 backdrop-blur-xl md:justify-between md:px-8 md:py-4">
-  <a href="/#top" class="hidden transition duration-300 hover:scale-110 md:block" aria-label="Ir al inicio">
-    <LogoIcon />
-  </a>
-  <nav class="flex flex-row items-center gap-x-4 rounded-full bg-white/[0.04] px-4 text-[13px] font-semibold text-white/85 shadow-xl shadow-black/10 sm:gap-x-8 sm:text-base md:bg-transparent md:shadow-none">
+<header class="fixed left-0 top-0 z-50 w-full px-3 py-3 md:px-6 md:py-4">
+  <div class="mx-auto flex w-full max-w-5xl items-center justify-between gap-2 rounded-2xl border border-cyan-800/15 bg-white/75 px-3 py-2 shadow-[0_14px_45px_rgba(8,145,178,0.13)] backdrop-blur-xl transition-colors duration-300 dark:border-cyan-300/20 dark:bg-slate-950/70 dark:shadow-[0_14px_50px_rgba(34,211,238,0.10)] md:px-5">
+    <a href="/#top" class="hidden text-slate-900 drop-shadow-[0_0_12px_rgba(34,211,238,0.28)] transition duration-300 hover:scale-110 dark:text-white md:block" aria-label="Ir al inicio">
+      <LogoIcon />
+    </a>
+    <nav class="flex min-w-0 flex-1 flex-row items-center justify-center gap-x-3 text-[12px] font-semibold text-slate-700 sm:gap-x-7 sm:text-base dark:text-white/85">
     {
       navItems.map(item => (
         item.icon ? (
-          <a class="relative py-2 transition duration-300 hover:-translate-y-0.5 hover:text-sky-400 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-sky-400 before:transition-transform before:duration-300 hover:before:scale-x-100" href={item.url} aria-label={item.label}>
+          <a class="relative py-2 transition duration-300 hover:-translate-y-0.5 hover:text-cyan-700 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-cyan-500 before:shadow-[0_0_10px_rgba(6,182,212,0.8)] before:transition-transform before:duration-300 hover:before:scale-x-100 dark:hover:text-cyan-300 dark:before:bg-cyan-300" href={item.url} aria-label={item.label}>
             <item.icon class="size-6 stroke-[1.5] sm:hidden" />
             <span class="hidden sm:inline">{item.title}</span>
           </a>
         ) : item.title === "Tech Stack" ? (
-          <a class="relative hidden py-2 transition duration-300 hover:-translate-y-0.5 hover:text-sky-400 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-sky-400 before:transition-transform before:duration-300 hover:before:scale-x-100 sm:inline" href={item.url} aria-label={item.label}>
+          <a class="relative hidden py-2 transition duration-300 hover:-translate-y-0.5 hover:text-cyan-700 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-cyan-500 before:shadow-[0_0_10px_rgba(6,182,212,0.8)] before:transition-transform before:duration-300 hover:before:scale-x-100 dark:hover:text-cyan-300 dark:before:bg-cyan-300 sm:inline" href={item.url} aria-label={item.label}>
             <span>{item.title}</span>
           </a>
         ) : (
-          <a class="relative py-2 transition duration-300 hover:-translate-y-0.5 hover:text-sky-400 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-sky-400 before:transition-transform before:duration-300 hover:before:scale-x-100" href={item.url} aria-label={item.label}>
+          <a class="relative py-2 transition duration-300 hover:-translate-y-0.5 hover:text-cyan-700 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:bg-cyan-500 before:shadow-[0_0_10px_rgba(6,182,212,0.8)] before:transition-transform before:duration-300 hover:before:scale-x-100 dark:hover:text-cyan-300 dark:before:bg-cyan-300" href={item.url} aria-label={item.label}>
             <span>{item.title}</span>
           </a>
         )
       ))
     }
-  </nav>
+    </nav>
+    <ThemeToggle />
+  </div>
 </header>
