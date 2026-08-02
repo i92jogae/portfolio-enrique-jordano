@@ -36,14 +36,14 @@ const TechStackItems = [
 ]
 ---
 
-<div class="relative overflow-hidden rounded-3xl border border-cyan-900/10 bg-white/70 py-6 shadow-[0_18px_50px_rgba(8,145,178,0.10)] backdrop-blur transition-colors dark:border-cyan-200/10 dark:bg-white/[0.045] dark:shadow-[0_18px_50px_rgba(0,0,0,0.2)]">
-  <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#eef8fc] to-transparent dark:from-slate-950"></div>
-  <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#eef8fc] to-transparent dark:from-slate-950"></div>
+<div class="relative overflow-hidden rounded-3xl border border-cyan-900/10 bg-white/75 py-6 shadow-[0_18px_52px_rgba(8,145,178,0.15)] backdrop-blur transition-colors dark:border-cyan-200/10 dark:bg-white/[0.05] dark:shadow-[0_0_34px_rgba(34,211,238,0.09)]">
+  <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#eef8fc]/90 to-transparent dark:from-slate-950/90"></div>
+  <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-[#eef8fc]/90 to-transparent dark:from-slate-950/90"></div>
   <ul class="flex w-max animate-slide gap-5 md:gap-7">
     {
       TechStackItems.concat(TechStackItems).map(item => (
-        <li class="flex min-w-24 flex-col items-center gap-2 rounded-2xl px-4 py-3 text-sm text-slate-600 transition duration-300 hover:-translate-y-1 hover:bg-cyan-50/80 hover:text-cyan-800 dark:text-white/80 dark:hover:bg-white/[0.06] dark:hover:text-white md:text-base">
-          <item.icon class="size-11 text-cyan-700 drop-shadow-[0_0_9px_rgba(6,182,212,0.16)] dark:text-cyan-200 dark:drop-shadow-[0_0_10px_rgba(34,211,238,0.18)] md:size-12" />
+        <li class="flex min-w-24 flex-col items-center gap-2 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition duration-300 hover:-translate-y-1 hover:bg-cyan-50/80 hover:text-cyan-800 dark:text-white/80 dark:hover:bg-white/[0.06] dark:hover:text-white md:text-base">
+          <item.icon class="size-11 text-cyan-700 drop-shadow-[0_0_11px_rgba(6,182,212,0.26)] dark:text-cyan-200 dark:drop-shadow-[0_0_13px_rgba(34,211,238,0.30)] md:size-12" />
           {item.name}
         </li>
       ))
