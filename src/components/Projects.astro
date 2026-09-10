@@ -8,6 +8,10 @@ import HTMLIcon from "../icons/HTML.astro"
 import GitHub2Icon from "../icons/GitHub2.astro"
 import DiagonalArrowIcon from "../icons/DiagonalArrow.astro"
 import ViteIcon from "../icons/Vite.astro"
+import TypeScriptIcon from "../icons/TypeScript.astro"
+import ReduxIcon from "../icons/Redux.astro"
+import TailwindCSSIcon from "../icons/Tailwind_CSS.astro"
+import VitestIcon from "../icons/Vitest.astro"
 import NodeJSIcon from "../icons/NodeJS.astro"
 
 const PROJECTS = [
@@ -30,13 +34,39 @@ const PROJECTS = [
     ],
   },
   {
+    title: 'Redux Users Dashboard',
+    subtitle: 'Dashboard de usuarios con React, TypeScript, Redux Toolkit y RTK Query',
+    description: 'Dashboard frontend para la gestión de usuarios con React, TypeScript, Redux Toolkit y RTK Query. Implementa CRUD completo, estado global tipado con Redux, búsqueda, ordenación, formularios validados, persistencia local, API simulada, caché, optimistic updates, diseño responsive y pipeline de calidad automatizado.',
+    github: 'https://github.com/i92jogae/react-crud-redux',
+    demo: 'https://redux-users-dashboard.netlify.app/',
+    image: '/projects/redux-users-dashboard.webp',
+    featured: true,
+    highlights: [
+      'TypeScript',
+      'Redux Toolkit',
+      'RTK Query',
+      'React Hook Form + Zod',
+      'Optimistic updates',
+      'Testing + CI/CD',
+      'Responsive dashboard'
+    ],
+    tags: [
+      { name: 'React', icon: ReactIcon },
+      { name: 'TypeScript', icon: TypeScriptIcon },
+      { name: 'Redux Toolkit', icon: ReduxIcon },
+      { name: 'RTK Query', icon: ReduxIcon },
+      { name: 'Tailwind CSS', icon: TailwindCSSIcon },
+      { name: 'Vitest', icon: VitestIcon },
+    ],
+  },
+  {
     title: 'React Movie Search',
     subtitle: 'Buscador de películas con React, custom hooks y OMDb API',
     description: 'Aplicación frontend desplegada en Netlify que consume la OMDb API para buscar películas. Implementa debounce para optimizar peticiones, evita búsquedas duplicadas, ordena resultados, gestiona estados de carga/error/sin resultados y desacopla la UI del contrato de la API mediante una capa de servicio.',
     github: 'https://github.com/i92jogae/react-movie-search',
     demo: 'https://reactmoviessearch.netlify.app',
     image: '/projects/movie-search.webp',
-    featured: true,
+    featured: false,
     highlights: ['Custom hooks', 'Debounce', 'API REST', 'useMemo/useCallback', 'Responsive UI'],
     tags: [
       { name: 'React', icon: ReactIcon },
@@ -53,7 +83,7 @@ const PROJECTS = [
     github: 'https://github.com/i92jogae/react-shopping-cart',
     demo: 'https://reactshoppingcart1.netlify.app/',
     image: '/projects/shopping-cart.webp',
-    featured: true,
+    featured: false,
     highlights: ['useReducer', 'Context API', 'localStorage', 'Custom hooks', 'REST API'],
     tags: [
       { name: 'React', icon: ReactIcon },
@@ -69,7 +99,7 @@ const PROJECTS = [
 <div class="grid gap-7">
   {
     PROJECTS.map(({ image, title, subtitle, github, demo, description, tags, highlights, featured }) => (
-      <article class={`group relative overflow-hidden rounded-3xl border border-cyan-900/10 bg-white/80 shadow-[0_18px_55px_rgba(8,145,178,0.14)] backdrop-blur transition duration-500 hover:-translate-y-1 hover:border-cyan-500/40 hover:bg-white/90 hover:shadow-[0_22px_62px_rgba(6,182,212,0.22)] dark:border-cyan-200/10 dark:bg-white/[0.055] dark:shadow-[0_20px_55px_rgba(0,0,0,0.2)] dark:hover:border-cyan-300/40 dark:hover:bg-white/[0.075] dark:hover:shadow-[0_0_42px_rgba(34,211,238,0.14)] ${featured ? 'md:grid md:grid-cols-[1.05fr_0.95fr]' : ''}`}>
+      <article class={`group relative overflow-hidden rounded-3xl border border-cyan-900/10 bg-white/80 shadow-[0_18px_55px_rgba(8,145,178,0.14)] backdrop-blur transition duration-500 hover:-translate-y-1 hover:border-cyan-500/40 hover:bg-white/90 hover:shadow-[0_22px_62px_rgba(6,182,212,0.22)] dark:border-cyan-200/10 dark:bg-white/[0.055] dark:shadow-[0_20px_55px_rgba(0,0,0,0.2)] dark:hover:border-cyan-300/40 dark:hover:bg-white/[0.075] dark:hover:shadow-[0_0_42px_rgba(34,211,238,0.14)] md:grid md:grid-cols-[1.05fr_0.95fr]`}>
         <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-transparent to-blue-400/5 opacity-0 transition duration-500 group-hover:opacity-100 dark:from-cyan-300/10 dark:to-blue-500/5"></div>
 
         <div class="relative flex flex-col justify-between p-6 md:p-7">
