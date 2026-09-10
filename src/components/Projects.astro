@@ -8,8 +8,27 @@ import HTMLIcon from "../icons/HTML.astro"
 import GitHub2Icon from "../icons/GitHub2.astro"
 import DiagonalArrowIcon from "../icons/DiagonalArrow.astro"
 import ViteIcon from "../icons/Vite.astro"
+import NodeJSIcon from "../icons/NodeJS.astro"
 
 const PROJECTS = [
+  {
+    title: 'TFG - DBLearning',
+    subtitle: 'Plataforma full stack de aprendizaje de bases de datos con IA',
+    description: 'Aplicación full stack orientada a producto para el aprendizaje de bases de datos. Incluye autenticación JWT, chatbot con IA generativa, generación de tests adaptativos, historial de consultas, seguimiento de resultados, panel de administración, persistencia en MySQL y una API Express refactorizada con arquitectura modular, validaciones, manejo centralizado de errores, testing y CI.',
+    github: 'https://github.com/i92jogae/TFG',
+    demo: '',
+    image: '/projects/dblearning.webp',
+    featured: true,
+    highlights: ['Full stack React + Express', 'OpenAI API', 'JWT Auth', 'MySQL real', 'Arquitectura modular', 'Testing + CI'],
+    tags: [
+      { name: 'React', icon: ReactIcon },
+      { name: 'Express.js', icon: ExpressJSIcon },
+      { name: 'Node.js', icon: NodeJSIcon },
+      { name: 'JavaScript', icon: JavaScriptIcon },
+      { name: 'MySQL', icon: MySQLIcon },
+      { name: 'CSS', icon: CSSIcon },
+    ],
+  },
   {
     title: 'React Movie Search',
     subtitle: 'Buscador de películas con React, custom hooks y OMDb API',
@@ -42,24 +61,6 @@ const PROJECTS = [
       { name: 'JavaScript', icon: JavaScriptIcon },
       { name: 'HTML', icon: HTMLIcon },
       { name: 'CSS', icon: CSSIcon },
-    ],
-  },
-  {
-    title: 'TFG - DB Learning',
-    subtitle: 'Aplicación web de aprendizaje interactivo con IA',
-    description: 'Aplicación didáctica que genera cuestionarios tipo test adaptativos mediante IA generativa. Incluye un chatbot de consultas asistido por IA y un sistema de seguimiento de progreso del usuario.',
-    github: 'https://github.com/i92jogae/TFG',
-    demo: '',
-    image: '/projects/dblearning.webp',
-    featured: false,
-    highlights: ['Full stack', 'IA generativa', 'Chatbot', 'MySQL', 'Express.js'],
-    tags: [
-      { name: 'React', icon: ReactIcon },
-      { name: 'Express.js', icon: ExpressJSIcon },
-      { name: 'JavaScript', icon: JavaScriptIcon },
-      { name: 'HTML', icon: HTMLIcon },
-      { name: 'CSS', icon: CSSIcon },
-      { name: 'MySQL', icon: MySQLIcon },
     ],
   },
 ]
